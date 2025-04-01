@@ -51,13 +51,18 @@ int main(void)
 				printf("Digit\n");
 				}else{
 					printf("E1B02黃詩祐\n");
+				
 				}
-		scanf("%c",&a);	
+	fflush(stdin);
+	scanf("%c",&a);	
 	fflush(stdin);
 	system("cls");	
-	
-	
-	
+	//5
+	printf("心得：第一題我用for迴圈，外層迴圈控制金字塔的行數 中層迴圈控制前面的空格 內層迴圈 輸出*號1357...第一題因為無法確定如何讓星星成1 3 5 7..輸出而少打了加1\n "); 
+	printf("心得：第二題我用if else做題如果password=2024便清除否則結束但是因為未明白== =的差別==為比較運算值=為賦予2024\n");
+	printf("心得：第三題就printf題目\n");
+	printf("心得：第四題我用if else解題if 輸入值ch在A~Z裡面便是Uppercase，輸入值ch在a~z裡面便是Lowercase，輸入值ch在0~9裡面便是Digit,其他便是E1B02黃詩祐，這題讓我對於字元範圍的控制和要用if else 時要加上括號才能讓");
+	printf("else找到if");
 	system("pause");
 	return 0;
 }
