@@ -39,6 +39,25 @@ int main(void)
 	fflush(stdin);
 	system("cls");
 	
+	//4.
+	char ch;
+	printf("enter a char==>");
+	scanf("%c",&ch);
+	if(ch>='A'&&ch<='Z'){
+		printf("Uppercase\n");
+		}else if(ch>='a'&&ch<='z'){
+			printf("Lowercase\n");
+			}else if(ch>='0'&&ch<='9'){
+				printf("Digit\n");
+				}else{
+					printf("E1B02¶À¸Ö¯§\n");
+				}
+		scanf("%c",&a);	
+	fflush(stdin);
+	system("cls");	
+	
+	
+	
 	system("pause");
 	return 0;
 }
