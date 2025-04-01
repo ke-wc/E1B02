@@ -29,7 +29,15 @@ int main(void)
 			system("pause");
 			return 0;
 	}
+	//3.
+	printf("'A'..........'Z':Uppercase\n");
+	printf("'a'..........'z':Lowercase\n");
+	printf("'0'..........'9':Digit\n");
+	printf("otherwise:E1B02¶À¸Ö¯§\n");
 		
+	scanf("%c",&a);	
+	fflush(stdin);
+	system("cls");
 	
 	system("pause");
 	return 0;
