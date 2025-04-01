@@ -18,6 +18,17 @@ int main(void)
 	
 	system("cls");
 	
+	//2.
+	printf("enter password 4 numbers==> ");
+	scanf("%d",&password);
+	if(password=2024){
+		scanf("%c",&a);
+		system("cls");
+ 		}else{
+			printf("incorrect\n");
+			system("pause");
+			return 0;
+	}
 		
 	
 	system("pause");
