@@ -21,7 +21,7 @@ int main(void)
 	//2.
 	printf("enter password 4 numbers==> ");
 	scanf("%d",&password);
-	if(password=2024){
+	if(password==2024){
 		scanf("%c",&a);
 		system("cls");
  		}else{
