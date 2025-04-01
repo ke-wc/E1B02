@@ -9,7 +9,7 @@ int main(void)
 	for(i=0;i<20;i++){
 		for(j=19-i;j>0;j--)
 			printf(" ");
-		for(k=0;k<i*2;k++)
+		for(k=0;k<1+i*2;k++)
 			printf("*");
 		printf("\n");
 	}
