@@ -5,7 +5,7 @@ int main(void)
 	int i,j,password=0,wrong=0;
 	char tem;
 	//第一題倒三角 
-	for(i=20;i>=1;i--){
+	/*for(i=20;i>=1;i--){
 		for(j=1;j<=i;j++){ 
 		printf("*");
 		}
@@ -31,7 +31,14 @@ int main(void)
 		system("pause");
 		return 0;
 	}
-	printf("123");
+	scanf("%c",&tem);
+	system("cls");*/
+	
+	//第二題
+	printf("a. 畫出直角三角形\n");
+	printf("b. 顯示乘法表\n");
+	printf("c. 結束\n");
+	
 	system("pause");
 	return 0;
 }
