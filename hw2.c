@@ -2,8 +2,8 @@
 #include<stdlib.h>
 int main(void)
 {
-	int i,j,password=0,wrong=0;
-	char tem,cha,cha1,k;
+	int i=0,j=0,password=0,wrong=0;
+	char tem,cha,cha1;
 	//第一題倒三角 
 	/*for(i=20;i>=1;i--){
 		for(j=1;j<=i;j++){ 
@@ -57,10 +57,16 @@ int main(void)
 			}
 		}
 	}
-	for(k='a';k<=cha;k++){
-		printf("1");
+	int trans=cha1-'a'+1,k;
+	for(i=1;i<=trans;i++){
+		for(k=0;k<trans-i;k++){
+			printf(" ");	
+		}		
+		for(j=1;j<=i;j++){
+			printf("%c",cha1-(j+1));
+		}
+		printf("\n");
 	}
-	
 	
 	
 	 
