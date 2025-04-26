@@ -2,17 +2,17 @@
 #include<stdlib.h>
 int main(void)
 {
-	int i,j,password=0,wrong;
+	int i,j,password=0,wrong=0;
 	char tem;
 	//第一題倒三角 
-	/*for(i=20;i>=1;i--){
+	for(i=20;i>=1;i--){
 		for(j=1;j<=i;j++){ 
 		printf("*");
 		}
 		printf("\n"); 
 	}
 	scanf("%c",&tem);
-	system("cls");*/
+	system("cls");
 	
 	
 	for(i=1;i<=3;i++){
