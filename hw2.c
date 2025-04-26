@@ -2,7 +2,7 @@
 #include<stdlib.h>
 int main(void)
 {
-	int i,j,password=0,wrong=0;
+	int i,j,password=0,wrong;
 	char tem;
 	//第一題倒三角 
 	/*for(i=20;i>=1;i--){
