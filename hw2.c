@@ -98,13 +98,10 @@ int main(void)
 	system("pause");
 	system("cls");
 	//第五題
-	
-	
-	getchar();
 	}
 	else if(cha=='C'||cha=='c'){
 		printf("Continue? (y/n)");
-		scanf("%c",&cha3);
+		scanf(" %c",&cha3);
 		if(cha3=='N'||cha3=='n'){
 		break;
 		}
@@ -119,7 +116,8 @@ int main(void)
         }
 	}
 }	
-	
+	printf("心得在這次的程式設計練習中，我學習了如何利用for迴圈和if搭配寫，並透過條件判斷讓使用者依需求執行不同功能，對於scanf()換行和清除緩衝區更了解");
+	printf("此外，搭配系統暫停和清除換面，讓畫面切換更流暢。");
 	return 0;
 
 }
