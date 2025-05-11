@@ -9,9 +9,9 @@ int main(void)
 	char cha,good,da;
 	char seats[9][9];
 
-	//第一題倒三角 
+	///第一題倒三角 
 
-	/*for(i=20;i>=1;i--){
+	for(i=20;i>=1;i--){
 		for(j=1;j<=i;j++){ 
 		printf("*");
 		}
@@ -36,7 +36,7 @@ int main(void)
 		return 0;
 	}
 	system("pause");
-	system("cls");*/
+	system("cls");
 	
 	for(i=0;i<9;i++){
 		for(j=0;j<9;j++){
@@ -212,6 +212,7 @@ int main(void)
 		}
 	}
 }
+printf("心得：做這個座位預訂系統的時候，我學到了用 if 判斷和陣列去控制整個流程，並透過不斷修正錯誤與改善流程，加強了程式邏輯、錯誤處理的基本能力");
 	system("pause");
 	return 0;	
 }
