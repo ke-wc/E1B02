@@ -2,10 +2,11 @@
 #include<stdlib.h>
 #include<windows.h> 
 #include <time.h>
+#define SIZE 9
 int main(void)
 {
-	int i=0,j=10,password=0,wrong=0;
-	char cha;
+	int i=0,j=10,password=0,wrong=0,n,found=0,ok,k;
+	char cha,good;
 	char seats[9][9];
 
 	//第一題倒三角 
@@ -36,16 +37,8 @@ int main(void)
 	}
 	system("pause");
 	system("cls");*/
-	printf("a. Available seats\n");
-	printf("b. Arrange for you\n");
-	printf("c. Choose by yourself\n");
-	printf("d. Exit\n");
 	
-	printf("輸入==>");
-	scanf("%c",&cha);
-	
-	if(cha=='a'||cha=='A'){
-		for(i=0;i<9;i++){
+	for(i=0;i<9;i++){
 		for(j=0;j<9;j++){
 			seats[i][j]='_';
 		}
@@ -59,6 +52,16 @@ int main(void)
         i++;
     }
 }
+	while(1){
+	printf("a. Available seats\n");
+	printf("b. Arrange for you\n");
+	printf("c. Choose by yourself\n");
+	printf("d. Exit\n");
+	
+	printf("輸入==>");
+	scanf("%c",&cha);
+	
+	if(cha=='a'||cha=='A'){
 		printf("\\123456789\n");
 		for(i = 0; i < 9; i++) {
         printf("%d", 9 - i);  
@@ -68,6 +71,63 @@ int main(void)
         printf("\n");  
     }
 }
+	system("pause\n");
+	system("cls");
+
+	if(cha=='b'||cha=='B'){
+	printf("需要幾個座位(1-4)==>");
+	scanf("%d",&n);	
+	 if (n >= 1 && n <= 3) {
+               
+                for (i = 0; i < SIZE && !found; i++) {
+                    for (j = 0; j <= SIZE - n; j++) {
+                        ok = 1;
+                        for (k = 0; k < n; k++) {
+                            if (seats[i][j + k] != '_') {
+                                ok = 0;
+                                break;
+                            }
+                        }
+                        if (ok) {
+                            for (k = 0; k < n; k++) {
+                                seats[i][j + k] = '@';  
+                            }
+                            found = 1;  
+                            break;
+                        }
+                    }
+                }
+            }
+
+            if (found) {
+                 printf("\\123456789\n");
+    		for (i = 0; i < SIZE; i++) {
+        printf("%d", SIZE - i);  // 打印行號
+        for (j= 0; j < SIZE; j++) {
+            printf("%c", seats[i][j]);  // 打印每個座位的狀態
+        }
+        printf("\n");
+    }
+}
+
+            printf("是否滿意建議的座位？(y/n)：");
+            scanf(" %c", &good);
+
+            if (good == 'y' || good == 'Y') {
+    
+                system("cls");
+            } else {
+                for (i = 0; i < SIZE; i++) {
+                    for (j = 0; j < SIZE; j++) {
+                        if (seats[i][j] == '@') {
+                            seats[i][j] = '*';
+                        }
+                    }
+                }
+                system("cls");
+            }
+ 	}
+    }
 	system("pause");
 	return 0;	
 }
