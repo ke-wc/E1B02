@@ -2,9 +2,9 @@
 #include<stdlib.h>
 #include<windows.h> 
 #include <time.h>
-int main(void
+int main(void)
 {
-	int i=0,j=0,password=0,wrong=0;
+	int i=0,j=10,password=0,wrong=0;
 	char cha;
 	char seats[9][9];
 
@@ -51,11 +51,14 @@ int main(void
 		}
 	}
 		srand(time(NULL));
-		for (i = 0; i < 10; i++) {
+		for (i = 0; i < 10;) {
         int r = rand() % 9;  
         int c = rand() % 9;  
-        seats[r][c] = '*';    
+        if (seats[r][c] != '*') {
+        seats[r][c] = '*';  
+        i++;
     }
+}
 		printf("\\123456789\n");
 		for(i = 0; i < 9; i++) {
         printf("%d", 9 - i);  
@@ -65,9 +68,8 @@ int main(void
         printf("\n");  
     }
 }
-
 	system("pause");
 	return 0;	
-
 }
+
 
