@@ -14,9 +14,27 @@ int main(void)
 	}
 	system("pause");
 	system("cls");
-
-
+		
+	for(i=1;i<=3;i++){
+		printf("enter the password==>");
+		scanf("%d",&password);
+		if(password==2025){
+			printf("correct\n");
+			break;
+			}else{
+				printf("wrong\n");
+				wrong++;		
+		}
+		
+	} 
+	if(wrong==3){
+		return 0;
+	}
+	system("pause");
+	system("cls");
 
 	system("pause");
 	return 0;	
+
 }
+
