@@ -73,7 +73,7 @@ int main(void)
 }
 	system("pause\n");
 	system("cls");
-
+	//1-3
 	if(cha=='b'||cha=='B'){
 	printf("需要幾個座位(1-4)==>");
 	scanf("%d",&n);	
@@ -105,14 +105,45 @@ int main(void)
                         }
                     }
                 }
+            } else if (n == 4) {
+        if (!found) {
+            for (i = 0; i < 9 && !found; i++) {
+                for (j = 0; j <= 5; j++) {
+                    int ok = 1;
+                    for (k = 0; k < 4; k++) {
+                        if (seats[i][j + k] != '_') {
+                            ok = 0;
+                            break;
+                        }
+                    }
+                    if (ok) {
+                        for (k = 0; k < 4; k++) 
+                            seats[i][j + k] = '@';
+                        found = 1;
+                        break;
+                    }
+                }
             }
+        }
+		if (!found) {
+            for (i = 0; i < 8 && !found; i++) {
+                for (j = 0; j <= 7; j++) {
+                    if (seats[i][j] == '_' && seats[i][j + 1] == '_' && seats[i + 1][j] == '_' && seats[i + 1][j + 1] == '_') {
+                        seats[i][j] = seats[i][j + 1] = seats[i + 1][j] = seats[i + 1][j + 1] = '@';
+                        found = 1;
+                        break;
+                    }
+                }
+            }
+        }
+    }
 
         if (found) {
         printf("\\123456789\n");
     	for (i = 0; i < SIZE; i++) {
-        printf("%d", SIZE - i);  // 打印行號
+        printf("%d", SIZE - i);  
         for (j= 0; j < SIZE; j++) {
-            printf("%c", seats[i][j]);  // 打印每個座位的狀態
+            printf("%c", seats[i][j]);  
         }
         printf("\n");
     }
