@@ -5,8 +5,8 @@
 #define SIZE 9
 int main(void)
 {
-	int i=0,j=10,password=0,wrong=0,n,found=0,ok,k;
-	char cha,good;
+	int i=0,j=10,password=0,wrong=0,n,found=0,ok,k,seats1,seats2;
+	char cha,good,da;
 	char seats[9][9];
 
 	//第一題倒三角 
@@ -59,7 +59,7 @@ int main(void)
 	printf("d. Exit\n");
 	
 	printf("輸入==>");
-	scanf("%c",&cha);
+	scanf(" %c",&cha);
 	
 	if(cha=='a'||cha=='A'){
 		printf("\\123456789\n");
@@ -70,13 +70,13 @@ int main(void)
         }
         printf("\n");  
     }
-}
+
 	system("pause\n");
 	system("cls");
 	//1-3
-	if(cha=='b'||cha=='B'){
+	}else if(cha=='b'||cha=='B'){
 	printf("需要幾個座位(1-4)==>");
-	scanf("%d",&n);	
+	scanf(" %d",&n);	
 	for (i = 0; i < SIZE; i++) {
         for (j = 0; j < SIZE; j++) {
             if (seats[i][j] == '@') {
@@ -166,9 +166,52 @@ int main(void)
                 found=0;
                 system("cls");
             }
- 	}
-    }
+ 	
     
+	
+    }else if(cha=='c'||cha=='C'){
+    	while (1) {
+        printf("輸入一個位置==>");
+        scanf(" %d %d", &seats1, &seats2);
+        if (seats1 >= 1 && seats1 <= SIZE && seats2 >= 1 && seats2 <= SIZE) {
+            if (seats[seats1 - 1][seats2 - 1] == '_') {
+                seats[seats1 - 1][seats2 - 1] = '@';
+                break;  
+            } else {
+                printf("已被佔用重新輸入。\n");
+            }
+        } else {
+            printf("無效的座位重新輸入。\n");
+        }
+    }
+	 printf("\\123456789\n");
+     for (i = 0; i < SIZE; i++) {
+        printf("%d", SIZE - i);  
+        for (j = 0; j < SIZE; j++) {
+            printf("%c", seats[i][j]);  
+        }
+        printf("\n");
+    }
+    for (i = 0; i < SIZE; i++) {
+            for (j = 0; j < SIZE; j++) {
+                if (seats[i][j] == '@') {
+                    seats[i][j] = '*'; 
+                }
+            }
+        }
+    system("pause");
+    system("cls");
+	}else if(cha=='d'||cha=='D'){
+		printf("end?(y/n)");
+		scanf(" %c",&da);
+		if(da=='n'){
+			continue;
+			system("cls");
+		}else{
+		break;
+		}
+	}
+}
 	system("pause");
 	return 0;	
 }
